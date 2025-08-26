@@ -4,6 +4,9 @@ This repository provides a MATLAB implementation of the unsupervised change dete
 
 > T. Celik, "Unsupervised Change Detection in Satellite Images Using Principal Component Analysis and k-Means Clustering," *IEEE Geoscience and Remote Sensing Letters*, vol. 6, no. 4, pp. 772-776, Oct. 2009.
 
+![Change Detection Demo](data/Las Vegas/ progress.gif)
+
+
 The algorithm combines **Principal Component Analysis (PCA)** with **K-Means clustering** to detect changes in multi-temporal satellite imagery. It is designed for analyzing already registered image sequences in different scenarios such as urbanization, deforestation, glacier melting, desiccation, or general change.
 
 ---
