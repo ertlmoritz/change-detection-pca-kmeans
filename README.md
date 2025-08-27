@@ -22,7 +22,7 @@ The algorithm combines **Principal Component Analysis (PCA)** with **K-Means clu
 
 ---
 
-## Repository Structure
+## 📂 Repository Structure
 
 ```
 change-detection-pca-kmeans/
@@ -44,7 +44,7 @@ change-detection-pca-kmeans/
 
 ---
 
-## Getting Started
+## ⚙️ Installation
 
 ### Requirements
 
@@ -52,14 +52,12 @@ change-detection-pca-kmeans/
 * Image Processing Toolbox
 * Statistics and Machine Learning Toolbox
 
-### Clone Repository
-
 ```bash
 git clone https://github.com/ertlmoritz/change-detection-pca-kmeans.git
 cd change-detection-pca-kmeans
 ```
 
-### Run Example
+## Run Example
 
 In MATLAB:
 
@@ -78,7 +76,18 @@ This will:
 
 ---
 
-## Usage
+## 🧑‍💻 Usage
+
+### Loader function
+
+```matlab
+imgs = loadRegisteredImages(folderPath)
+```
+
+* Reads all `.png/.jpg/.tif` images from folder
+* Sorts by `MM_YYYY` in filename
+* Crops all images to common size
+* Returns cell array of RGB images
 
 ### Core function
 
@@ -97,7 +106,7 @@ This will:
 * `'folderPath'` : path to save GIF (default: '')
 * `'h'` : block size for PCA (default: 2)
 * `'S'` : number of PCA components (default: 3)
-* `'doPlot'` : show overlays (default: false)
+* `'doPlot'` : show binary masks (default: false)
 * `'doGraph'` : plot cumulative change (default: false)
 * `'delayTime'` : GIF frame delay in seconds (default: 1.0)
 
@@ -107,25 +116,6 @@ This will:
 * `nValidPixels`   : number of valid pixels in analysis area
 * `cumChanges`     : cumulative change ratio per time step
 * `relGrowth`      : incremental change per step
-
-### Loader function
-
-```matlab
-imgs = loadRegisteredImages(folderPath)
-```
-
-* Reads all `.png/.jpg/.tif` images from folder
-* Sorts by `MM_YYYY` in filename
-* Crops all images to common size
-* Returns cell array of RGB images
-
----
-
-## Example Output
-
-* Detected change masks (red overlays)
-* Cumulative change curve over time
-* Optional animated GIF of progression
 
 ---
 
