@@ -6,9 +6,9 @@ This repository provides a MATLAB implementation of the unsupervised change dete
 
 ![Change Detection Demo](data/Brazil/progress.gif)
 
-
-
 The algorithm combines **Principal Component Analysis (PCA)** with **K-Means clustering** to detect changes in multi-temporal satellite imagery. It is designed for analyzing already registered image sequences in different scenarios such as urbanization, deforestation, glacier melting, desiccation, or general change.
+
+![Cumulative Change Demo](examples/example_plot.tif)
 
 ---
 
