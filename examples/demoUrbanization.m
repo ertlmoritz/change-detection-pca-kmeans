@@ -12,6 +12,6 @@ clear; clc; close all;
 imgs = loadRegisteredImages('data/Las Vegas');
 
 % --- Run change detection ---
-[changeMaps, nValidPixels, cumChanges, relGrowth] = changeDetectionPCAKMeans(imgs, 'urbanization', 'folderPath', 'data/Las Vegas', 'doPlot', false, 'doGraph', true);
+[changeMaps, nValidPixels, cumChanges, relGrowth] = changeDetectionPCAKMeans(imgs, 'urbanization', 'folderPath', 'data/Las Vegas', 'doPlot', true, 'doGraph', true);
 
 
