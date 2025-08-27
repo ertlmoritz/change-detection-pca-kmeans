@@ -1,0 +1,12 @@
+# Ignore MATLAB autosave and backup files
+*.asv
+*.m~
+*.mat~
+*.fig~
+
+# Ignore data if too large
+data/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
