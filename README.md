@@ -104,8 +104,8 @@ imgs = loadRegisteredImages(folderPath)
 * `'folderPath'` : path to save GIF (default: '')
 * `'h'` : block size for PCA (default: 2)
 * `'S'` : number of PCA components (default: 3)
-* `'doPlot'` : show binary masks (default: false)
-* `'doGraph'` : plot cumulative change (default: false)
+* `'doPlot'` : show scene masks as binary images and detected change as red overlay over original image (default: false)
+* `'doGraph'` : plot cumulative change relative to analysed area and rate of change (default: false)
 * `'delayTime'` : GIF frame delay in seconds (default: 1.0)
 
 **Outputs:**
