@@ -4,7 +4,7 @@ This repository provides a MATLAB implementation of the unsupervised change dete
 
 > T. Celik, "Unsupervised Change Detection in Satellite Images Using Principal Component Analysis and k-Means Clustering," *IEEE Geoscience and Remote Sensing Letters*, vol. 6, no. 4, pp. 772-776, Oct. 2009.
 
-![Change Detection Demo](data/Las%20Vegas/progress.gif)
+![Change Detection Demo](data/Brazil/progress.gif)
 
 
 
@@ -12,7 +12,7 @@ The algorithm combines **Principal Component Analysis (PCA)** with **K-Means clu
 
 ---
 
-## Features
+## 🚀 Features
 
 * PCA-based feature extraction from blockwise image differences
 * K-Means clustering for binary change detection
@@ -26,16 +26,17 @@ The algorithm combines **Principal Component Analysis (PCA)** with **K-Means clu
 
 ```
 change-detection-pca-kmeans/
+├── data/
+│   ├── Brazil                    # Example dataset for deforestation
+│   ├── Glacier Greenland         # Example dataset for glacier melting
+│   └── Las Vegas/                # Example dataset for urbanization
+├── examples/
+│   ├── demoDeforestation.m       # Example demo script
+│   ├── demoGlacierMelting.m      # Example demo script
+│   └── demoUrbanization.m        # Example demo script
 ├── src/
 │   ├── changeDetectionPCAKMeans.m   # Main algorithm
 │   └── loadRegisteredImages.m       # Loader for registered image sequences
-│
-├── examples/
-│   └── demoUrbanization.m           # Example demo script
-│
-├── data/
-│   └── urbanization/                # Example dataset (small registered images)
-│
 ├── LICENSE
 ├── .gitignore
 └── README.md
@@ -47,12 +48,14 @@ change-detection-pca-kmeans/
 
 ### Requirements
 
-* MATLAB R2021a or newer (Image Processing Toolbox recommended)
+* MATLAB R2022a or newer
+* Image Processing Toolbox
+* Statistics and Machine Learning Toolbox
 
 ### Clone Repository
 
 ```bash
-git clone https://github.com/moritz-ertl/change-detection-pca-kmeans.git
+git clone https://github.com/ertlmoritz/change-detection-pca-kmeans.git
 cd change-detection-pca-kmeans
 ```
 
@@ -69,6 +72,7 @@ This will:
 
 * Load images from `data/urbanization`
 * Run the PCA+KMeans change detection
+* Show binary change masks
 * Show cumulative change plots
 * Overlay detected changes on the final image
 
@@ -125,73 +129,24 @@ imgs = loadRegisteredImages(folderPath)
 
 ---
 
-## License
-
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
-## Citation
+## 📖 Citation
 
 If you use this code, please cite the original paper:
 
 ```
-@article{celik2009unsupervised,
-  title={Unsupervised Change Detection in Satellite Images Using Principal Component Analysis and k-Means Clustering},
+@ARTICLE{5196726,
   author={Celik, Turgay},
-  journal={IEEE Geoscience and Remote Sensing Letters},
+  journal={IEEE Geoscience and Remote Sensing Letters}, 
+  title={Unsupervised Change Detection in Satellite Images Using Principal Component Analysis and $k$-Means Clustering}, 
+  year={2009},
   volume={6},
   number={4},
-  pages={772--776},
-  year={2009},
-  publisher={IEEE}
-}
+  pages={772-776},
+  keywords={Satellites;Principal component analysis;Pixel;Image analysis;Data mining;Change detection algorithms;Radar detection;Parameter estimation;Euclidean distance;Optical devices;Change detection;$k$-means clustering;multitemporal satellite images;optical images;principal component analysis (PCA);remote sensing},
+  doi={10.1109/LGRS.2009.2025059}}
 ```
 
 ---
 
-## LICENSE (MIT)
-
-```text
-MIT License
-
-Copyright (c) 2025 Moritz Ertl
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
----
-
-## .gitignore (MATLAB)
-
-```gitignore
-# Ignore MATLAB autosave and backup files
-*.asv
-*.m~
-*.mat~
-*.fig~
-
-# Ignore data if too large
-data/
-
-# Ignore system files
-.DS_Store
-Thumbs.db
-```
-
+## 📜 License
+This project is licensed under the [MIT License](LICENSE).
