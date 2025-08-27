@@ -35,8 +35,8 @@ change-detection-pca-kmeans/
 ├── src/
 │   ├── changeDetectionPCAKMeans.m   # Main algorithm
 │   └── loadRegisteredImages.m       # Loader for registered image sequences
-├── LICENSE
 ├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
